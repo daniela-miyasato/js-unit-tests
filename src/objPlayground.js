@@ -36,14 +36,25 @@
 // arredondar pra baixo (Math.floor()) - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
 
 const calculator = (number1, number2) => ({
-sum: Math.floor(number1 + number2),
-mult: Math.floor(number1 * number2),
+sum: (number1 + number2),
+mult: (number1 * number2),
 div: Math.floor(number1 / number2),
-sub: Math.floor(number1 - number2),
+sub: (number1 - number2),
 });
 
-console.log(calculator(10, 5));
+console.log(calculator(9, 5));
 
-const arrayGenerator = (type, object) => {};
+// aula 7.2
+const arrayGenerator = (type, object) => {
+  if (type === 'keys') {
+    return Object.keys(object);
+  }
+  if (type === 'values') {
+    return Object.values(object);
+  }
+  if (type === 'entries') {
+    return Object.entries(object);
+  }
+};
 
 module.exports = { calculator, arrayGenerator };

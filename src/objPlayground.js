@@ -33,7 +33,16 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
 */
 
-const calculator = (number1, number2) => {};
+// arredondar pra baixo (Math.floor()) - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+
+const calculator = (number1, number2) => ({
+sum: Math.floor(number1 + number2),
+mult: Math.floor(number1 * number2),
+div: Math.floor(number1 / number2),
+sub: Math.floor(number1 - number2),
+});
+
+console.log(calculator(10, 5));
 
 const arrayGenerator = (type, object) => {};
 
